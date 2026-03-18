@@ -1,0 +1,41 @@
+# Photobooth Security Configuration
+
+# Disable directory listing
+Options -Indexes
+
+# Enable mod_rewrite
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+</IfModule>
+
+# Restrict file access for security
+<Files "*.json">
+    Deny from all
+</Files>
+
+<Files ".htaccess">
+    Deny from all
+</Files>
+
+# Allow image files in uploads directory
+<FilesMatch "\.(jpg|jpeg|png|gif|webp)$">
+    Allow from all
+</FilesMatch>
+
+# Prevent PHP execution in uploads directory
+php_flag engine off
+
+# Set proper cache headers
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpeg "access plus 30 days"
+    ExpiresByType image/png "access plus 30 days"
+    ExpiresByType image/webp "access plus 30 days"
+    ExpiresByType text/css "access plus 30 days"
+    ExpiresByType application/javascript "access plus 30 days"
+</IfModule>
+
+# Compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript
+</IfModule>

@@ -1,0 +1,70 @@
+/* Disco Fever Theme - Purple & Gold, 70s Groovy Vibes */
+:root {
+    --primary-color: #9d4edd;
+    --accent-color: #ffd60a;
+    --neon-color: #00f5ff;
+    --secondary-accent: #ff006e;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(45deg, #9d4edd 0%, #c77dff 25%, #e0aaff 50%, #c77dff 75%, #9d4edd 100%);
+    background-size: 400% 400%;
+    animation: retrogradient 15s ease infinite;
+}
+
+.photobooth {
+    box-shadow: 
+        0 0 0 8px #ffd60a,
+        0 0 0 12px #ff006e,
+        0 0 0 16px #00f5ff,
+        0 0 40px rgba(255, 0, 110, 0.5),
+        0 0 60px rgba(0, 245, 255, 0.3);
+    border-color: #ffd60a;
+}
+
+h1 {
+    color: #ffd60a;
+    text-shadow: 
+        3px 3px 0px #ff006e,
+        6px 6px 0px #00f5ff,
+        9px 9px 20px rgba(255, 0, 110, 0.5);
+}
+
+h2 {
+    color: #00f5ff;
+    text-shadow: 2px 2px 0px #ff006e;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #9d4edd 0%, #c77dff 100%);
+    border-color: #ffd60a;
+}
+
+.btn-capture {
+    background: linear-gradient(135deg, #ffd60a 0%, #ffed4e 100%);
+    border-color: #ff006e;
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, #00f5ff 0%, #00d4ff 100%);
+    border-color: #ff006e;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ff006e 0%, #ff67b4 100%);
+    border-color: #ffd60a;
+}
+
+.camera-section {
+    border-color: #ff006e;
+}
+
+.preview-section {
+    border-color: #00f5ff;
+}
+
+.info-section {
+    background: linear-gradient(135deg, #9d4edd 0%, #c77dff 100%);
+    border-color: #ffd60a;
+}

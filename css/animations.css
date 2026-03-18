@@ -1,0 +1,126 @@
+/* Smooth animations for aesthetic polish */
+
+/* Pulse effect for active elements */
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 20px rgba(139, 172, 15, 0.4),
+            inset 0 0 10px rgba(139, 172, 15, 0.1);
+    }
+    50% {
+        box-shadow: 
+            0 0 35px rgba(139, 172, 15, 0.7),
+            inset 0 0 15px rgba(139, 172, 15, 0.2);
+    }
+}
+
+/* Smooth fade-in entrance */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gentle bounce effect */
+@keyframes gentleBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Subtle rotation for loading states */
+@keyframes subtleRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(6deg);
+    }
+}
+
+/* Glow pulse effect for important buttons */
+@keyframes glowPulse {
+    0%, 100% {
+        text-shadow: 
+            4px 4px 0px #306230,
+            8px 8px 0px #1a1a1a,
+            0 0 20px rgba(139, 172, 15, 0.2);
+    }
+    50% {
+        text-shadow: 
+            4px 4px 0px #306230,
+            8px 8px 0px #1a1a1a,
+            0 0 40px rgba(139, 172, 15, 0.4);
+    }
+}
+
+/* Apply animations */
+.photobooth-step {
+    animation: fadeInSlideUp 0.5s ease-out;
+}
+
+.btn-capture:active {
+    animation: gentleBounce 0.3s ease-in-out;
+}
+
+.step-indicator-item.completed .step-indicator-circle {
+    animation: pulseGlow 2s ease-in-out 1;
+}
+
+/* Hover scale effect for cards */
+.preview-photo {
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.preview-photo:hover {
+    animation: gentleBounce 0.4s ease-in-out;
+}
+
+/* Smooth transitions for all interactive elements */
+.btn, .filter-btn, .color-btn, .layout-option, .strip-layout-btn, .polaroid-style-btn {
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+/* Enhanced border-radius for smoother appearance */
+.photobooth-step {
+    border-radius: 12px;
+}
+
+/* Better text anti-aliasing */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Premium focus states */
+.btn:focus,
+.btn-primary:focus,
+.btn-capture:focus,
+input:focus,
+textarea:focus {
+    outline: none;
+    transform: scale(1.02);
+}
+
+/* Customize section enhancement */
+.customize-section {
+    animation: fadeInSlideUp 0.6s ease-out;
+}
+
+/* Gallery item animation */
+.gallery-item {
+    animation: fadeInSlideUp 0.7s ease-out;
+}
+
+/* Enhanced progress bar animation */
+#progressFill {
+    animation: pulseGlow 1.5s ease-in-out infinite;
+}
